@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container"><br><br><br><br><br>
+  <div class="container md-auto mx-auto">
+    <h1 class="text-center">Padaria Melhor da Cidade</h1>
+    <br>
+    <img src="{% static 'padaria/images/padaria.jpg' %}" />
+    <img src="{% static 'padaria/images/pao.jpg' %}" />
+    <img src="{% static 'padaria/images/pao2.jpg' %}" />
+    <img src="{% static 'padaria/images/pao3.jpg' %}" />
+    <br><br>
+  </div>
+  <br><br><br>
+  <h4 class="text-center">Inscreva-se na nossa newsletter para saber mais sobre nossos produtos semanalmente:</h4>
+  <br>
+  <div class="input-group mb-3">
+    <input type="email" id="inputao" class="form-control" required placeholder="email.email@email.com"
+      aria-label="Email" aria-describedby="basic-addon2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Inscrever-se
+    </button>
+
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">NewsLetter</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Você tem certeza?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não tenho certeza</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#modalCertezaOk">Sim!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCertezaOk" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modalCertezaOkLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalCertezaOkLabel">Parabéns!!!!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Parabéns, você está cadastrado na nossa newsletter!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="window.location.reload();">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

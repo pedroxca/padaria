@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Sobre</h1>
+      <h5>Somos uma padaria de sucesso</h5>
+      <img src="{% static 'padaria/images/padaria.jpg' %}" width="600px" height="500px" />
+    </div>
+    <div class="col-md-6">
+      <h1>Onde ficamos</h1>
+      <h5>Lugar de excelência</h5>
+      <p>Estamos localizados no centro da cidade, podendo fornecer uma experiência única para você!</p>
+      <a target="_blank" href="https://www.google.com/maps/place/0%C2%B000'00.0%22N+0%C2%B000'00.0%22E/@0.0000054,-0.0025749,17z/data=!3m1!4b1?entry=ttu">
+        Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
